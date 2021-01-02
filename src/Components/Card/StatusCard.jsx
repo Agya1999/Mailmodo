@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+import { Card, CardContent, Typography, Grid, Paper } from "@material-ui/core";
 import axios from "axios";
 import "./StatusCard.css";
-import InfoTable from '../InfoTable/InfoTable';
-
+import InfoTable from "../InfoTable/InfoTable";
+import Destination from "../../Images/destination.svg";
+import Warehouse from "../../Images/warehouse.svg";
 class StatusCard extends Component {
   constructor(props) {
     super(props);
@@ -24,116 +23,73 @@ class StatusCard extends Component {
       email: "naweliverma7@gmail.com",
     };
     const config = {
-      headers: { Authorization: `Bearer tTU3gFVUdP` },
+      headers: { Authorization: 'Bearer tTU3gFVUdP' }
     };
-    axios
-      .post(
-        "https://f0ztti2nsk.execute-api.ap-south-1.amazonaws.com/v1/consignment/fetch",
-        body,
-        config
-      )
-      .then((res) => {
-        this.setState({ data: res.data }, () => this.handleFilter("DEL"));
-        for (let i = 0; i < res.data.length; i++) {
-          switch (res.data[i].current_status_code) {
-            case "OOD":
-              this.setState((prevState) => {
-                return {
-                  ...prevState,
-                  OOD: prevState.OOD + 1,
-                };
-              });
-              break;
-            case "DEL":
-              this.setState((prevState) => {
-                return {
-                  ...prevState,
-                  DEL: prevState.DEL + 1,
-                };
-              });
-              break;
-            case "INT":
-              this.setState((prevState) => {
-                return {
-                  ...prevState,
-                  INT: prevState.INT + 1,
-                };
-              });
-              break;
-            case "DEX":
-              this.setState((prevState) => {
-                return {
-                  ...prevState,
-                  DEX: prevState.DEX + 1,
-                };
-              });
-              break;
-            case "NFI":
-              this.setState((prevState) => {
-                return {
-                  ...prevState,
-                  NFI: prevState.NFI + 1,
-                };
-              });
-              break;
-            default:
-              console.log("gh", i);
-              break;
-          }
-        }
+    axios.post("/consignment/fetch", body, config).then(({ data }) => {
+      console.log(data);
+      data.map((orders) => {
+        this.setState((prevState) => {
+          return {
+            ...prevState,
+            [orders.current_status_code]:
+              prevState[orders.current_status_code] + 1,
+          };
+        });
       });
+      this.setState({ data }, () => this.handleFilter("DEL"));
+    });
   }
   handleFilter = (param) => {
     let tempData = [];
     tempData = this.state.data.filter((x) => {
       return x.current_status_code === param;
     });
-    // console.log(tempData);
-    // console.log("card clicked")
     this.setState({ filteredData: tempData });
   };
-
   render() {
-    const { OOD, DEL, INT, DEX, NFI } = this.state;
     return (
       <React.Fragment>
-      <div className="StatusCards">
-        <Card className="StatusList" onClick={() => this.handleFilter("DEL")}>
-          <CardContent >
-            <Typography className="Status_TYPE">DEL</Typography>
-            <Typography className="Status_COUNT">{DEL}</Typography>
-          </CardContent>
-        </Card>
-        <Card className="StatusList"onClick={() => this.handleFilter("INT")}>
-          <CardContent >
-            <Typography className="Status_TYPE">INT</Typography>
-            <Typography className="Status_COUNT">{INT}</Typography>
-          </CardContent>
-        </Card>
-        <Card className="StatusList"onClick={() => this.handleFilter("OOD")}>
-          <CardContent >
-            <Typography className="Status_TYPE">OOD</Typography>
-            <Typography className="Status_COUNT">{OOD}</Typography>
-          </CardContent>
-        </Card>
-        <Card className="StatusList"onClick={() => this.handleFilter("DEX")}>
-          <CardContent >
-            <Typography className="Status_TYPE">DEX</Typography>
-            <Typography className="Status_COUNT">{DEX}</Typography>
-          </CardContent>
-        </Card>
-        <Card className="StatusList"onClick={() => this.handleFilter("NFI")}>
-          <CardContent >
-            <Typography className="Status_TYPE">NFI</Typography>
-            <Typography className="Status_COUNT">{NFI}</Typography>
-          </CardContent>
-        </Card>
-      </div>
-      <InfoTable data={this.state.filteredData}/>
-     
-      </React.Fragment>
+        <div className="StatusCards">
+          {["OOD", "DEL", "INT", "DEX", "NFI"].map((val) => {
+            return (
+              <Card
+                className="StatusList"
+                onClick={() => this.handleFilter(val)}
+              >
+                <CardContent>
+                  <Typography className="Status_TYPE">{val}</Typography>
+                  <Typography className="Status_COUNT">
+                    {this.state[val]}
+                  </Typography>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+        <Grid container>
+          <Grid item xs={3}>
+            <Paper
+              elevation={3}
+              style={{ width: "100%" }}
+              className="sideLeftTableCard"
+            >
+              <img
+                src={Destination}
+                alt="FliprBrand"
+                className="FliprTableNav"
+              />
 
+              <img src={Warehouse} alt="FliprBrand" className="FliprTableNav" />
+            </Paper>
+          </Grid>
+          <Grid item xs={9}>
+            {" "}
+            <InfoTable data={this.state.filteredData} />
+          </Grid>
+        </Grid>
+      </React.Fragment>
     );
   }
 }
+
 export default StatusCard;

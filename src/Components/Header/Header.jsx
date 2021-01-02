@@ -14,10 +14,10 @@ import './Header.css';
 export default function ButtonAppBar() {
  
   return (
-    <div className="logo">
+    <div className="Container">
       <AppBar position="static">
         <Toolbar>
-            <img src ={logo} alt ="logo"/>
+            <img src ={logo} alt ="logo" className="Logo"/>
 
           <Typography variant="h6" className="Brand">
             Intguine
