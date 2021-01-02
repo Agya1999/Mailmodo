@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+header.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
+    background-color: white;
+}
+h6.MuiTypography-root.Brand.MuiTypography-h6 {
+    color: black;
+    font-size: 1.25rem;
+    font-family: "Rubik";
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+}
+.HeaderItems
+{
+    display:flex;
+    color: black;
+    margin-left: auto;
+}
+
+h6.MuiTypography-root.items.MuiTypography-h6 {
+    font-size: 1.25rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    padding: 12px;
+}
+    
