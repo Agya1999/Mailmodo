@@ -18,12 +18,12 @@ const columns = [
   {
     id: "DESTINATION",
     label: "DESTINATION",
-    minWidth: 30,
+    minWidth: 10,
   },
   {
     id: "BRAND",
     label: "BRAND",
-    minWidth: 70,
+    minWidth: 20,
   },
   {
     id: "START DATE",
@@ -103,7 +103,7 @@ export default function StickyHeadTable(props) {
                     {data.extra_fields &&
                       data.extra_fields.expected_delivery_date.substring(0, 10)}
                   </TableCell>
-                  <td>{data.current_status}</td>
+                  <TableCell>{data.current_status}</TableCell>
                 </TableRow>
               ))}
           </TableBody>

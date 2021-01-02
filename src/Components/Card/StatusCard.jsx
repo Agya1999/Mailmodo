@@ -23,7 +23,7 @@ class StatusCard extends Component {
       email: "naweliverma7@gmail.com",
     };
     const config = {
-      headers: { Authorization: 'Bearer tTU3gFVUdP' }
+      headers: { Authorization: "Bearer tTU3gFVUdP" },
     };
     axios.post("/consignment/fetch", body, config).then(({ data }) => {
       console.log(data);
@@ -50,7 +50,7 @@ class StatusCard extends Component {
     return (
       <React.Fragment>
         <div className="StatusCards">
-          {["OOD", "DEL", "INT", "DEX", "NFI"].map((val) => {
+          {[ "DEL", "INT","OOD", "DEX", "NFI"].map((val) => {
             return (
               <Card
                 className="StatusList"
@@ -68,18 +68,11 @@ class StatusCard extends Component {
         </div>
         <Grid container>
           <Grid item xs={3}>
-            <Paper
-              elevation={3}
-              style={{ width: "100%" }}
-              className="sideLeftTableCard"
-            >
-              <img
-                src={Destination}
-                alt="FliprBrand"
-                className="FliprTableNav"
-              />
+            <Paper>
+              <img src={Destination} alt="FliprBrand" className="DestinationLogo"/>
 
-              <img src={Warehouse} alt="FliprBrand" className="FliprTableNav" />
+                
+              <img src={Warehouse} alt="FliprBrand" className="Warehouse" />
             </Paper>
           </Grid>
           <Grid item xs={9}>

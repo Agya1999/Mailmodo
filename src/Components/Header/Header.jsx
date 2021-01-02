@@ -23,13 +23,13 @@ export default function ButtonAppBar() {
             Intguine
           </Typography>
           <div className="HeaderItems">
-          <Typography variant="h6" className="items">
+          <Typography variant="h6" className="items" href="#">
             Home
           </Typography>
-           <Typography variant="h6" className="items">
+           <Typography variant="h6" className="items" href="#">
             Brand
           </Typography>
-          <Typography variant="h6" className="items">
+          <Typography variant="h6" className="items" >
             Transporters
           </Typography>
 

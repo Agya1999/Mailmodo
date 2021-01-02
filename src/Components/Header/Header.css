@@ -1,29 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
 header.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
-    background-color: white;
+  background-color: white;
 }
 h6.MuiTypography-root.Brand.MuiTypography-h6 {
-    color: black;
-    font-size: 1.25rem;
-    font-family: "Rubik";
-    font-weight: 500;
-    line-height: 1.6;
-    letter-spacing: 0.0075em;
+  color: #222d67;
+  font-size: 1.12rem;
+  font-family: "Rubik";
+  font-weight: 500;
 }
 
-.HeaderItems
-{
-    display:flex;
-    color: black;
-    margin-left: auto;
+.HeaderItems {
+  display: flex;
+  margin-left: auto;
+  color: black;
 }
 
 h6.MuiTypography-root.items.MuiTypography-h6 {
-    font-size: 1.25rem;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: 500;
-    line-height: 1.6;
-    letter-spacing: 0.0075em;
-    padding: 12px;
+  font-size: 1.12rem;
+  font-family: "Rubik";
+  padding: 12px;
+  color: #222d67;
 }
+h6.MuiTypography-root.items.MuiTypography-h6:hover {
+    background-color: rgba(0, 0, 0, 0.04);
     
+}
+
+@media (min-width: 600px) {
+  .MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
+    height: 83px;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .MuiToolbar-regular {
+    min-height: 40%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .MuiToolbar-regular {
+    min-height: 50%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .MuiToolbar-regular {
+    min-height: 35%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .MuiToolbar-regular {
+    min-height: 25%;
+  }
+}
