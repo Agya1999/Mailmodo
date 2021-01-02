@@ -1,0 +1,8 @@
+.table-responsive {
+    height: 50vh;
+    float: right;
+  }
+  thead {
+    text-align-last: center;
+  }
+  

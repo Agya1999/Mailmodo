@@ -1,0 +1,27 @@
+.StatusCards
+{   
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
+    
+}
+.MuiPaper-root.MuiCard-root.StatusList.MuiPaper-elevation1.MuiPaper-rounded {
+    margin: 10px;
+    width: 7rem;
+    height: 7rem;
+    background: #d5defd;
+    color: blue;
+}
+.Status_TYPE{
+    font-size: 1.7rem;
+    font-weight: 600;
+    /* position: absolute; */
+    display: block;
+    padding: 4px 0px 0px 5px;
+
+}
+.Status_COUNT
+{
+    font-family: "Rubik:wght@300";
+  margin: 5rem 3.5rem;
+}

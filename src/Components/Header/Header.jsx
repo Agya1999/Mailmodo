@@ -3,24 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import logo from '../../Images/logo.svg';
-
+import IconButton from '@material-ui/core/IconButton';
+import PersonOutlineTwoToneIcon from '@material-ui/icons/PersonOutlineTwoTone';
+import ExpandMoreTwoToneIcon from '@material-ui/icons/ExpandMoreTwoTone';
 import './Header.css';
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//   },
-//   menuButton: {
-//     marginRight: theme.spacing(2),
-//   },
-//   title: {
-//     flexGrow: 1,
-    
-    
-//   },
-// }));
+
 
 export default function ButtonAppBar() {
  
@@ -44,8 +33,14 @@ export default function ButtonAppBar() {
             Transporters
           </Typography>
 
-          {/* <PersonTwoToneIcon/>
-          <KeyboardArrowDownTwoToneIcon/> */}
+          <IconButton edge="start" className="usericon" color="inherit" aria-label="menu">
+            < PersonOutlineTwoToneIcon/>
+            
+          </IconButton>
+          <IconButton edge="start" className="usericon" color="inherit" aria-label="menu">
+            < ExpandMoreTwoToneIcon/>
+            
+          </IconButton>
 
           </div>
           

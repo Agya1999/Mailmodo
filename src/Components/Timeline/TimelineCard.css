@@ -1,0 +1,62 @@
+.sideLeftTableCard.card {
+    border: 1px solid lightgrey;
+    width: 35%;
+    margin: 4rem;
+    height: auto;
+    padding: 2rem;
+  }
+  .vl {
+    border-left: 2px dashed #1d4a86;
+    height: 530px;
+    margin-left: 3rem;
+    display: grid;
+  }
+  img.FliprTableNav {
+    background: #bfc2c9;
+    padding: 17px;
+    border-radius: 57%;
+    margin-left: 0.35rem;
+  }
+  .rowPartsOne.row {
+    border-radius: 1rem;
+    background-color: blue;
+    width: 1rem;
+    height: 1rem;
+    margin-left: -0.5rem;
+    margin-top: 1.5rem;
+    display: inline-grid;
+    grid-auto-flow: column;
+  }
+  .rowParts.row {
+    border-radius: 1rem;
+    background-color: blue;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 6rem;
+    margin-left: -0.5rem;
+    display: grid;
+    grid-auto-flow: column;
+  }
+  hr.horizontalLineOne {
+    margin-left: 2rem;
+    width: 5rem;
+    height: 1px;
+    background-color: blue;
+  }
+  hr.horizontalLine {
+    margin-left: 2rem;
+    width: 5rem;
+    height: 1px;
+    background-color: blue;
+    display: table-caption;
+  }
+  span.rowPartsspan {
+    background-color: lightgrey;
+    width: 32rem;
+    height: 4rem;
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+  }
+  hr {
+      margin-top: 5px !important;
+  }
