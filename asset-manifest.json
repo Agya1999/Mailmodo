@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Mailmodo/static/css/main.3ba05719.chunk.css",
+    "main.js": "/Mailmodo/static/js/main.d1428ad6.chunk.js",
+    "main.js.map": "/Mailmodo/static/js/main.d1428ad6.chunk.js.map",
+    "runtime-main.js": "/Mailmodo/static/js/runtime-main.bf8be3e7.js",
+    "runtime-main.js.map": "/Mailmodo/static/js/runtime-main.bf8be3e7.js.map",
+    "static/js/2.e220d26a.chunk.js": "/Mailmodo/static/js/2.e220d26a.chunk.js",
+    "static/js/2.e220d26a.chunk.js.map": "/Mailmodo/static/js/2.e220d26a.chunk.js.map",
+    "static/js/3.6c8c059f.chunk.js": "/Mailmodo/static/js/3.6c8c059f.chunk.js",
+    "static/js/3.6c8c059f.chunk.js.map": "/Mailmodo/static/js/3.6c8c059f.chunk.js.map",
+    "index.html": "/Mailmodo/index.html",
+    "static/css/main.3ba05719.chunk.css.map": "/Mailmodo/static/css/main.3ba05719.chunk.css.map",
+    "static/js/2.e220d26a.chunk.js.LICENSE.txt": "/Mailmodo/static/js/2.e220d26a.chunk.js.LICENSE.txt",
+    "static/media/destination.5336278d.svg": "/Mailmodo/static/media/destination.5336278d.svg",
+    "static/media/logo.60097ea2.svg": "/Mailmodo/static/media/logo.60097ea2.svg",
+    "static/media/warehouse.147c9c0b.svg": "/Mailmodo/static/media/warehouse.147c9c0b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf8be3e7.js",
+    "static/js/2.e220d26a.chunk.js",
+    "static/css/main.3ba05719.chunk.css",
+    "static/js/main.d1428ad6.chunk.js"
+  ]
+}
