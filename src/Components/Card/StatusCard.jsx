@@ -70,38 +70,6 @@ class StatusCard extends Component {
           <Grid item xs={3}>
             <Paper>
               <img src={Destination} alt="FliprBrand" className="DestinationLogo"/>
-              <div ClassName="clearfix pb10">
-  <section className="timeline__item timeline__item--first">
-    <div className="row">
-      <div className="medium-6 columns"></div>
-      <div className="medium-6 columns"></div>
-    </div>
-  </section>
-  <section className="timeline__item">
-    <div className="row">
-      <div className="medium-6 columns"></div>
-      <div className="medium-6 columns"></div>
-    </div>
-  </section>
-  <section className="timeline__item">
-    <div className="row">
-      <div className="medium-6 columns"></div>
-      <div className="medium-6 columns"></div>
-    </div>
-  </section>
-  <section className="timeline__item">
-    <div className="row">
-      <div className="medium-6 columns"></div>
-      <div className="medium-6 columns"></div>
-    </div>
-  </section>
-  <section className="timeline__item timeline__item--last">
-    <div className="row">
-      <div className="medium-6 columns"></div>
-      <div className="medium-6 columns"></div>
-    </div>
-  </section>
-</div>
 
                 
               <img src={Warehouse} alt="FliprBrand" className="Warehouse" />
